@@ -18,55 +18,55 @@ public class Assignment1 : ProcessingLite.GP21
     {
         Background(Color.black);
 
-        letterN();
-        letterI();
-        letterK();
-        letterL();
-        letterA();
-        letterS();
+        letterN(4,7);
+        letterI(7, 7);
+        letterK(8, 7);
+        letterL(11, 7);
+        letterA(16, 7);
+        letterS(19, 7);
         drawRect();
         drawEllipse();
     }
 
-    void letterN()
+    void letterN(int posX, int posY)
     {
-        Line(4, 7, 4, 3);
-        Line(4, 7, 6, 3);
-        Line(6, 7, 6, 3);
+        Line(posX, posY, posX, posY - 4);
+        Line(posX, posY, posX + 2, posY - 4);
+        Line(posX + 2, posY, posX +2, posY - 4);
     }
 
-    void letterI()
+    void letterI(int posX, int posY)
     {
-        Line(7, 7, 7, 3);
+        Line(posX, posY, posX, posY - 4);
     }
 
-    void letterK()
+    void letterK(int posX, int posY)
     {
-        Line(8, 7, 8, 3);
-        Line(8, 5, 10, 3);
-        Line(10, 7, 8, 5);
+        Line(posX, posY, posX, posY - 4);
+        Line(posX, posY - 2, posX + 2, posY - 4);
+        Line(posX + 2, posY, posX, posY - 2);
     }
 
-    void letterL()
+    void letterL(int posX, int posY)
     {
-        Line(11, 7, 11, 3);
-        Line(11, 3, 13, 3);
+        Line(posX, posY, posX, posX - 8);
+        Line(posX, posY - 4, posX + 2, posX - 8);
     }
 
-    void letterA()
+    void letterA(int posX, int posY)
     {
-        Line(16, 7, 14, 3);
-        Line(15, 5, 17, 5);
-        Line(16, 7, 18, 3);
+        Line(posX, posY, posX - 2, posY - 4);
+        Line(posX - 1, posY - 2, posX + 1, posY - 2);
+        Line(posX, posY, posX + 2, posY - 4);
     }
 
-    void letterS()
+    void letterS(int posX, int posY)
     {
-        Line(19, 7, 21, 7);
-        Line(19, 7, 19, 5);
-        Line(19, 5, 21, 5);
-        Line(21, 5, 21, 3);
-        Line(19, 3, 21, 3);
+        Line(posX, posY, posX + 2, posY);
+        Line(posX, posY, posX, posY - 2);
+        Line(posX, posY - 2, posX + 2, posY - 2);
+        Line(posX + 2, posY - 2, posX + 2, posY - 4);
+        Line(posX, posY - 4, posX + 2, posY - 4);
     }
 
     void drawEllipse()
