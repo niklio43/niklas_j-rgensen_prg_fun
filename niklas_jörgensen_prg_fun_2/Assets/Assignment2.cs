@@ -5,8 +5,6 @@ using UnityEngine;
 public class Assignment2 : ProcessingLite.GP21
 {
 
-    float spaceBetweenLines = 0.2f;
-
     void Start()
     {
     }
@@ -16,11 +14,8 @@ public class Assignment2 : ProcessingLite.GP21
     {
         Background(Color.blue);
 
-        /*straightLine(8, 8, 8, 3);
-        straightLine(8, 7, 9, 3);
-        straightLine(8, 6, 10, 3);*/
         int z = 10;
-        for (int i = 11; i < Height / spaceBetweenLines; i++)
+        for (int i = 11; i < 21; i++)
         {
             z--;
             straightLine(10, z, i, 3);
