@@ -15,10 +15,10 @@ public class Assignment2 : ProcessingLite.GP21
         Background(Color.blue);
 
         int z = 10;
-        for (int i = 11; i < 21; i++)
+        for (int i = 10; i < 19; i++)
         {
             z--;
-            straightLine(10, z, i, 3);
+            straightLine(10, z, i, 5);
 
             if(i % 3 == 0)
             {
