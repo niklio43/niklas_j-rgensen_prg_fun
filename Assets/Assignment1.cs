@@ -5,12 +5,10 @@ using UnityEngine;
 public class Assignment1 : ProcessingLite.GP21
 {
 
+    float animPosY = 7;
+
     void Start()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            Debug.Log("hej nummer: " + i);
-        }
     }
 
 
@@ -18,49 +16,55 @@ public class Assignment1 : ProcessingLite.GP21
     {
         Background(Color.black);
 
-        letterN(4,7);
+        letterN(4, animPosY);
         letterI(7, 7);
-        letterK(8, 7);
+        letterK(8, animPosY);
         letterL(11, 7);
-        letterA(16, 7);
+        letterA(16, animPosY);
         letterS(19, 7);
         drawRect();
         drawEllipse();
+
+        if (animPosY < 8)
+        {
+            animPosY += Time.deltaTime;
+        }
+
     }
 
-    void letterN(int posX, int posY)
+    void letterN(float posX, float posY)
     {
         Line(posX, posY, posX, posY - 4);
         Line(posX, posY, posX + 2, posY - 4);
         Line(posX + 2, posY, posX +2, posY - 4);
     }
 
-    void letterI(int posX, int posY)
+    void letterI(float posX, float posY)
     {
         Line(posX, posY, posX, posY - 4);
     }
 
-    void letterK(int posX, int posY)
+    void letterK(float posX, float posY)
     {
         Line(posX, posY, posX, posY - 4);
         Line(posX, posY - 2, posX + 2, posY - 4);
         Line(posX + 2, posY, posX, posY - 2);
     }
 
-    void letterL(int posX, int posY)
+    void letterL(float posX, float posY)
     {
         Line(posX, posY, posX, posX - 8);
         Line(posX, posY - 4, posX + 2, posX - 8);
     }
 
-    void letterA(int posX, int posY)
+    void letterA(float posX, float posY)
     {
         Line(posX, posY, posX - 2, posY - 4);
         Line(posX - 1, posY - 2, posX + 1, posY - 2);
         Line(posX, posY, posX + 2, posY - 4);
     }
 
-    void letterS(int posX, int posY)
+    void letterS(float posX, float posY)
     {
         Line(posX, posY, posX + 2, posY);
         Line(posX, posY, posX, posY - 2);
