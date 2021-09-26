@@ -56,44 +56,9 @@ public class Assignment4 : ProcessingLite.GP21
 
     void Border()
     {
-        //first ball X
-        if (position.x < 0)
-        {
-            position.x += Width;
-        }
-        if (position.x > Width)
-        {
-            position.x -= Width;
-        }
-
-        //first ball Y
-        if (position.y < 0)
-        {
-            position.y += Height;
-        }
-        if (position.y > Height)
-        {
-            position.y -= Height;
-        }
-
-        //second ball X
-        if (position2.x < 0)
-        {
-            position2.x += Width;
-        }
-        if (position2.x > Width)
-        {
-            position2.x -= Width;
-        }
-
-        //second ball Y
-        if (position2.y < 0)
-        {
-            position2.y += Height;
-        }
-        if (position2.y > Height)
-        {
-            position2.y -= Height;
-        }
+        position.x = (position.x + Width) % Width;
+        position.y = (position.y + Height) % Height;
+        position2.x = (position2.x + Width) % Width;
+        position2.y = (position2.y + Height) % Height;
     }
 }
