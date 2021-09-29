@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Assignment4 : ProcessingLite.GP21
 {
-    float posY = 0;
     float diameter = 2;
     float speed = 5f;
     Vector2 position;
